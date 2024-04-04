@@ -1,0 +1,12 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+import { PROJECTS } from '../consts';
+---
+
+<section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mx-auto">
+    {
+        PROJECTS.map((project) => (
+            <ProjectCard project={project}/>
+        ))
+    }
+</section>

@@ -1,0 +1,20 @@
+---
+interface Props{
+    color: string;
+    link: string;
+}
+
+const { color, link } = Astro.props;
+---
+
+<a class:list={['flex flex-row gap-x-2 text-lg border-2 px-6 py-1.5 rounded-lg hover:scale-105 transition',
+        {
+            'border-blue-700 hover:bg-blue-500/25 text-blue-700': color === 'blue',
+            'border-black hover:bg-black/15 text-black': color === 'black',
+        }
+    ]}
+    href={link}
+>
+    <slot name="icon" />
+    <slot />
+</a>

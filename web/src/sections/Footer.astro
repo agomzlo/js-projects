@@ -1,0 +1,31 @@
+---
+import Github from "../components/icons/Github.astro";
+import Instagram from "../components/icons/Instagram.astro";
+
+
+---
+
+<footer class="flex w-full max-w-7xl justify-between items-center py-16 px-8">
+    <!-- <div class="flex w-full max-w-7xl justify-between"> -->
+        <h2 class="text-black text-lg">Made by <span class="font-bold text-blue-500">agomzlodev</span></h2>
+        <span class="flex flex-row items-center gap-x-2 text-black text-lg">
+            Follow me
+            <a 
+                class="hover:scale-110 hover:text-blue-500" 
+                href="https://www.instagram.com/agomzlodev/" 
+                target="_blank"
+                rel="noreferrer noopener"
+            >
+                <Instagram class="w-8 h-8"/>
+            </a>
+            <a 
+                class="hover:scale-110 hover:text-blue-500" 
+                href="https://github.com/agomzlo" 
+                target="_blank" 
+                rel="noreferrer noopener"
+            >
+                <Github class="w-8 h-8"/>
+            </a>
+        </span>
+    <!-- </div> -->
+</footer>
