@@ -1,0 +1,26 @@
+---
+import type { Project } from "../types/project";
+import JavaScript from "./icons/JavaScript.astro";
+
+const { project } = Astro.props;
+
+interface Props {
+    project: Project;
+}
+
+const numberedId = project.id.toString().padStart(2, "0");
+---
+
+<div class="absolute left-8 bottom-8 flex flex-col justify-center items-center animate-fade-in-up animate-duration-1000 animate-delay-300">
+    <a 
+        href="/"
+        class="flex flex-rox justify-center items-center px-3 py-1 text-3xl font-bold text-yellow-500
+        hover:scale-110 transition"
+    >
+        Projects
+        <JavaScript class="w-8 h-8 rotate-12 ml-1" />
+    </a>
+    <span class="flex flex-row justify-center items-center">
+        <h2 class="text-xl font-bold text-gray-500">#{numberedId} - {project.title}</h2>
+    </span>
+</div>

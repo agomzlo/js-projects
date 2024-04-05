@@ -1,0 +1,29 @@
+---
+import BackButton from "../components/BackButton.astro";
+import { PROJECTS } from "../consts";
+import Layout from "../layouts/Layout.astro";
+
+export const getStaticPaths = () => {
+  return PROJECTS.map((project) => ({
+    params: {
+      project: project.slug,
+    },
+  }));
+};
+
+const { project } = Astro.params;
+console.log(project);
+const projectIndex = PROJECTS.findIndex((p) => p.slug === project);
+console.log(projectIndex);
+const currentProject = PROJECTS[projectIndex];
+const numberedId = currentProject.id.toString().padStart(2, "0");
+---
+
+<Layout title={`JS Project: ${numberedId} - ${currentProject.title}`}>
+  <iframe
+    class="w-screen h-screen"
+    title={currentProject.title}
+    src={`/projects/${project}/index.html`}>
+  </iframe>
+  <BackButton project={currentProject}/>
+</Layout>

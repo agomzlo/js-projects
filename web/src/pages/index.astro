@@ -1,11 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../sections/Hero.astro';
-import Projects from '../sections/Projects.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../sections/Header.astro";
+import Footer from "../sections/Footer.astro";
+import Hero from "../sections/Hero.astro";
+import Projects from "../sections/Projects.astro";
 ---
 
 <Layout title="JS Projects">
-	<div class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#fffdd0,transparent)]"></div>
-	<Hero />
-	<Projects />
+  <Header />
+  <main class="max-w-7xl px-4 m-auto">
+    <div
+      class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#fffdd0,transparent)]"
+    >
+    </div>
+    <Hero />
+    <Projects />
+  </main>
+  <Footer />
 </Layout>
