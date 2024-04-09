@@ -58,7 +58,7 @@ main{
 
         &:focus{
           outline: none;
-          border-color: blue;
+          border-color: #3b82f6;
         }
         
         &::-webkit-inner-spin-button,
@@ -72,8 +72,8 @@ main{
         display: flex;
         flex-direction: row;
         align-items: center;
-        border: blue 1px solid;
-        color: blue;
+        border: #3b82f6 1px solid;
+        color: #3b82f6;
         border-radius: 8px;
         padding: 5px 15px;
         cursor: pointer;
@@ -89,7 +89,7 @@ main{
         &:hover{
           scale: 1.1;
           color: white;
-          background: blue;
+          background: #3b82f6;
           font-weight: bold;
 
           &[aria-disabled="true"]{
@@ -132,9 +132,9 @@ header{
 
         & span{
             padding: 6px 12px;
-            border: #a5a5a5 1px solid;
+            border: #3b82f6 1px solid;
             border-radius: 8px;
-            color: #a5a5a5;
+            color: #3b82f6;
             transition: all 0.2s ease-in-out;
 
             &:hover{
@@ -355,8 +355,8 @@ footer{
       display: flex;
       flex-direction: row;
       align-items: center;
-      border: blue 1px solid;
-      color: blue;
+      border: #3b82f6 1px solid;
+      color: #3b82f6;
       border-radius: 8px;
       padding: 5px 15px;
       cursor: pointer;
@@ -372,7 +372,7 @@ footer{
       &:hover{
         scale: 1.1;
         color: white;
-        background: blue;
+        background: #3b82f6;
         font-weight: bold;
 
         &[aria-disabled="true"]{
