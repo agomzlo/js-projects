@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>02 - Random Number Game</title>
+</head>
+
+<body>
+  <main id="app">
+    <dialog id="help" class="help">
+      <form method="dialog">
+        <h1>Game Help</h1>
+        <p>
+          In this random number game you can choose a range of number and try to guess the number. The game will give you hints
+          with colors about your guess. You can play the game by clicking the "Check" button.
+        </p>
+        <section class="color-info">
+          <h2>Color Info</h2>
+          <span>
+            <div class="correct-number"></div>
+            Your number is the correct number.
+          </span>
+          <span>
+            <div class="near-number"></div>
+            Your number is 5 numbers away from the correct number.
+          </span>
+          <span>
+            <div class="far-number"></div>
+            Your number is 10 numbers away from the correct number.
+          </span>
+          <span>
+            <div class="very-far-number"></div>
+            Your number is more than 10 numbers away from the correct number.
+          </span>
+        </section>
+        <span id="closeHelp" class="close-help">
+          <img src="/icons/close.svg" alt="">
+        </span>
+      </form>
+    </dialog>
+    <dialog id="win" class="win">
+      <form method="dialog">
+        <h1 class="secret-num" id="winSecretNumber"></h1>
+        <section class="game-info">
+          <p>Attempts: <span id="winAttempts"></span></p>
+          <p class="number-history">Numbers: <ul id="winAllNumbers"></ul></p>
+        </section>
+        <span id="closeWin" class="close-win">
+          Close
+        </span>
+      </form>
+    </dialog>
+    <header>
+        <h1>
+          Random Number Game
+          <span id="openHelp" class="open-help">
+            <img src="/icons/help.svg" alt="">
+          </span>
+        </h1>
+        <section>
+            <span id="easyLevel" data-max-num="25">1-25</span>
+            <span id="normalLevel" data-max-num="50">1-50</span>
+            <span id="hardLevel" data-max-num="75">1-75</span>
+            <span id="veryHardLevel" data-max-num="100">1-100</span>
+        </section>
+    </header>
+    <section class="game">
+      <input type="number" id="userNumber" class="user-number" disabled>
+      <span id="submitNumber" aria-disabled="true">Check</span>
+    </section>
+    </section>
+    <footer>
+      <section class="prev-nums">
+        <span>Previous Numbers</span>
+        <ul id="prevNums"></ul>
+      </section>
+      <section class="game-info">
+        <div>
+          <span>Attempts:</span>
+          <span id="attempts">0</span>
+        </div>
+        <span id="restart" class="restart" aria-disabled="true">Restart</span>
+      </section>
+    </footer>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
