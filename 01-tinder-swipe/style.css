@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-html{
+html {
   display: grid;
   place-content: center;
 }
@@ -44,7 +44,7 @@ section {
   padding: 16px 12px;
   margin: 15px 20px 13px 19px;
 
-  & .phone-bg{
+  & .phone-bg {
     position: absolute;
     background-color: #f6f6f6;
     inset: 0;
