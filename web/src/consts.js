@@ -15,5 +15,21 @@ export const PROJECTS = [
             github: 'https://github.com/agomzlo/js-projects/tree/main/01-tinder-swipe',
             demo: '/projects/01-tinder-swipe/index.html'
         }
-    },
+    },{
+        id: 2,
+        slug: '02-random-number-game',
+        title: 'Random Number Game',
+        description: 'Learn how to create a random number game with HTML, CSS and JavaScript',
+        learnings: [
+            'Dom',
+            'Events',
+            'Random numbers',
+            'Arrays'
+        ],
+        links: {
+            cover: '/projects/Project-02.webp',
+            github: 'https://github.com/agomzlo/js-projects/tree/main/02-random-number-game',
+            demo: '/projects/02-random-number-game/index.html'
+        }
+    }
 ];
