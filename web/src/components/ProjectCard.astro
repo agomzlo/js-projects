@@ -12,15 +12,21 @@ interface Props {
 }
 ---
 
-<article class="relative group rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition">
+<article class="relative group rounded-lg shadow-lg hover:scale-105 hover:shadow-xl 
+    animate-blurred-fade-in animate-delay-1000 animate-duration-750 transition">
     <a href=`/${project.slug}`>
         <img 
             class="rounded-lg" 
             src={project.links.cover}
             alt="Project 01 cover image"
         >
+        <div class="absolute text-3xl font-bold -rotate-12 top-2 left-2 opacity-70
+            [text-shadow:1px_1px_5px_white] group-hover:text-5xl group-hover:opacity-100 
+            transition-all">
+            #{project.id.toString().padStart(2, "0")}
+        </div>
     </a>
-    <div class="p-4">
+    <div class="flex flex-col p-4">
         <h3 class="text-3xl font-bold">
             <a href=`/${project.slug}` class="hover:text-blue-500">{project.title}</a>
         </h3>
@@ -52,8 +58,5 @@ interface Props {
                 </Button>
             </li>
         </ul>
-    </div>
-    <div class="absolute text-3xl font-bold -rotate-12 top-2 left-2 opacity-70 group-hover:text-5xl group-hover:opacity-100 transition-all">
-        #{project.id.toString().padStart(2, "0")}
     </div>
 </article>

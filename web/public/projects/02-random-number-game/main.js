@@ -139,6 +139,7 @@ function checkNumber() {
         $winDialog.showModal();
         $winAttempts.innerHTML = attempts;
         $winSecretNumber.innerHTML = randomNumber;
+        $winAllNumbers.innerHTML = "";
         previousNumbers.reverse().forEach(({number, color}) => {
             $winAllNumbers.innerHTML += `<li class="${color}">${number}</li>`;
           });
