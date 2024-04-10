@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-block-size: 100%;
+  overflow: hidden;
+  user-select: none;
+  background-color: #2e2e2e;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+main {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+
+  & header {
+    & h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+  }
+
+  & ul.board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5px;
+
+    & div.bg-board {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #2e2e2e 0%, white 72.5%);
+      animation: scale-in 0.5s ease-in-out 2s both;
+    }
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      width: 80px;
+      height: 80px;
+
+      &.cell-0 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &.cell-1 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 0.25s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-2 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-5 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 0.75s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-4 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-3 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 1.25s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-6 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-7 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 1.75s;
+        animation-fill-mode: both;
+      }
+
+      &.cell-8 {
+        animation: scale-in;
+        animation-duration: 0.5s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+      }
+
+      &.winner-cell {
+        animation: winner 1.5s ease-in-out infinite both;
+      }
+
+      &:hover[data-ready-to-play="true"] {
+        background-color: #e5e5e5;
+        scale: 1.05;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        &[aria-disabled="true"] {
+          background-color: #f5f5f5;
+          scale: 1;
+          box-shadow: none;
+          cursor: not-allowed;
+        }
+      }
+
+      & img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  & footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+
+    & p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+
+    & span.restart {
+      border: #d5d5d5 1px solid;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      padding: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &[aria-disabled="true"] {
+        color: #d5d5d5;
+        cursor: not-allowed;
+      }
+
+      &:hover {
+        background-color: #e5e5e5;
+
+        &[aria-disabled="true"] {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes winner {
+  0% {
+    background-color: #f5f5f5;
+    scale: 1;
+  }
+  50% {
+    background-color: #e5e5e5;
+    scale: 1.05;
+  }
+  100% {
+    background-color: #f5f5f5;
+    scale: 1;
+  }
+}

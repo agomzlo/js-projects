@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Project: 03 - Three In A Row</title>
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <header>
+        <h1>Three In A Row</h1>
+      </header>
+      <ul id="board" class="board">
+        <div class="bg-board"></div>
+        <li class="cell-0" id="cell0" data-ready-to-play="false"></li>
+        <li class="cell-1" id="cell1" data-ready-to-play="false"></li>
+        <li class="cell-2" id="cell2" data-ready-to-play="false"></li>
+        <li class="cell-3" id="cell3" data-ready-to-play="false"></li>
+        <li class="cell-4" id="cell4" data-ready-to-play="false"></li>
+        <li class="cell-5" id="cell5" data-ready-to-play="false"></li>
+        <li class="cell-6" id="cell6" data-ready-to-play="false"></li>
+        <li class="cell-7" id="cell7" data-ready-to-play="false"></li>
+        <li class="cell-8" id="cell8" data-ready-to-play="false"></li>
+      </ul>
+      <footer>
+        <p>Player <span id="playerTurn"><img src="/icons/x.svg" alt="player X"></span> Turn</p>
+        <span id="restart" class="restart" aria-disabled="true">Restart</span>
+      </footer>
+    </main>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
