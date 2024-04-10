@@ -35,7 +35,7 @@ export const PROJECTS = [
   {
     id: 3,
     slug: "03-three-in-a-row",
-    title: "Three in a row",
+    title: "Three In A Row",
     description:
       "Learn how to create a three in a row game with HTML, CSS and JavaScript",
     learnings: ["Dom", "Events", "Arrays", "Basic Algorithmic"],
